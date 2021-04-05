@@ -1,5 +1,5 @@
 {
-  "name": "SattimGitti",
+  "name": "sattimgitti",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,8 +9,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/svg-sprite": "^0.5.2",
+    "bootstrap": "^5.0.0-beta3",
     "core-js": "^3.9.1",
+    "node-sass": "^5.0.0",
     "nuxt": "^2.15.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.3",
+    "fibers": "^5.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1"
+  }
 }

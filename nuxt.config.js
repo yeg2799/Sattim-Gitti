@@ -11,12 +11,14 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel:"stylesheet",type:"text/css",href:"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"}
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -28,6 +30,11 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // Simple usage
+    '@nuxtjs/vuetify',
+    '@nuxtjs/svg-sprite',
+    // With options
+    ['@nuxtjs/vuetify', { /* module options */ }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
