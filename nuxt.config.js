@@ -12,13 +12,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {rel:"stylesheet",type:"text/css",href:"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"}
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -35,10 +33,12 @@ export default {
     '@nuxtjs/svg-sprite',
     // With options
     ['@nuxtjs/vuetify', { /* module options */ }]
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['bootstrap-vue/nuxt']
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -1,6 +1,6 @@
 <template>
     <component
-        :is="require(`~/assets/icons/svg/${icon}.svg?inline`)"
+        :is="require(`@/assets/icons/svg/${icon}.svg`)"
         class="icon"
     />
 </template>

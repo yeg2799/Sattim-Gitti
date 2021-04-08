@@ -10,15 +10,16 @@
   },
   "dependencies": {
     "@nuxtjs/svg-sprite": "^0.5.2",
-    "bootstrap": "^5.0.0-beta3",
+    "bootstrap-vue": "^2.21.2",
     "core-js": "^3.9.1",
     "node-sass": "^5.0.0",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.3",
     "fibers": "^5.0.0",
-    "sass": "^1.32.8",
-    "sass-loader": "^10.1.1"
+    "sass": "^1.32.8"
   }
 }
