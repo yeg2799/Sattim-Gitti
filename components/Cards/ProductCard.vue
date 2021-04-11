@@ -23,7 +23,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .productCard{
     width: 15%;
     display: flex;
