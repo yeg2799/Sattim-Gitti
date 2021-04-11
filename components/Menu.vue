@@ -1,9 +1,7 @@
 <template>
     <div class="Menu">
         <NuxtLink to="/" class="link"><span>Anasayfa</span></NuxtLink>
-        <NuxtLink to="/elektronik" class="link"
-            ><span>Elektronik</span></NuxtLink
-        >
+        <NuxtLink to="/teknoloji" class="link"><span>Teknoloji</span></NuxtLink>
         <NuxtLink to="/moda" class="link"><span>Moda</span></NuxtLink>
         <NuxtLink to="/ev" class="link"><span>Ev</span></NuxtLink>
     </div>

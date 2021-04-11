@@ -26,38 +26,23 @@
         </div>
       </div>
     </div> -->
-    <div class="technology">
-      <img src="@/assets/image/products/mens_outerwear.jpg" />
-      <span class="text">Teknoloji Ürünleri</span>
-      <div class="button">
-        <button class="techButton">Alışveriş Yap</button>
-      </div>
-    </div>
-        <div class="technology">
-      <img src="@/assets/image/products/mens_outerwear.jpg" />
-      <span class="text">Teknoloji Ürünleri</span>
-      <div class="button">
-        <button class="techButton">Alışveriş Yap</button>
-      </div>
-    </div>
-        <div class="technology">
-      <img src="@/assets/image/products/mens_outerwear.jpg" />
-      <span class="text">Teknoloji Ürünleri</span>
-      <div class="button">
-        <button class="techButton">Alışveriş Yap</button>
-      </div>
-    </div>
+    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/teknoloji"/>
+    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/teknoloji"/>
+    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/teknoloji"/>
+    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/teknoloji"/>
   </div>
 </template>
 
 <script>
 import ProductCard from "@/components/Cards/ProductCard.vue";
 import BrandCard from "@/components/Cards/BrandCard.vue";
+import PromotionCard from "@/components/Cards/promotionCards";
 export default {
   components: {
     ProductCard,
-    BrandCard
-  }
+    BrandCard,
+    PromotionCard,
+  },
 };
 </script>
 
@@ -68,24 +53,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .technology {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    .text {
-      text-align: center;
-      font-size: 20px;
-      padding-top: 10px;
-    }
-    .button{
-      text-align: center;
-      padding-top: 15px;
-    }
-    .techButton {
-      border: 3px solid black;
-      padding: 10px 50px;
-    }
-  }
 }
 // .popularProducts {
 //   display: flex;
