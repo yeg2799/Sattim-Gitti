@@ -1,9 +1,10 @@
 <template>
-    <div class="productCard">
-        <span class="productDesc">{{ productDesc }}</span>
-        <img :src="require(`@/assets/image/products/${productPic}.png`)" alt="" class="productPic"/>
-        <span class="productPrice">{{productPrice}}<p class="price">TL</p></span>
-    </div>
+        <div class="productCard">
+            <img :src="require(`@/assets/image/products/${productPic}.jpg`)" alt="" class="productPic"/>
+            <h4 class="text">SAMSUNG QE 65Q70T 65" 163 CM 4K UHD SMART QLED TV,DAHİLİ UYDU ALICI</h4>
+            <span class="productPrice">{{productPrice}}<p class="price">TL</p></span>
+            <span class="addToCard">Sepete Ekle</span>
+        </div>
 </template>
 <script>
 export default {
@@ -25,23 +26,19 @@ export default {
 </script>
 <style lang="scss" scoped>
 .productCard{
-    width: 15%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #484848;
+
     margin-right: 10px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+
     .productDesc{
         font-size: 20px;
         font-weight: 500;
         padding: 10px;
         text-align: center;
-    }
-    .productPic{
-        width: 80%;
     }
     .productPrice{
         color: #684EDE;
@@ -51,6 +48,15 @@ export default {
         justify-content: flex-start;
         .price{
             font-size: 20px;
+        }
+    }
+    .addToCard{
+        border: 1px solid black;
+        padding: 10px 50px; 
+        cursor: pointer;
+        font-size: 20px;
+        &:hover{
+            color: red;
         }
     }
 }
