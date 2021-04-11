@@ -31,13 +31,11 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     margin-right: 10px;
-
-    .productDesc{
+    margin-bottom: 20px;
+    .text{
         font-size: 20px;
         font-weight: 500;
-        padding: 10px;
         text-align: center;
     }
     .productPrice{
