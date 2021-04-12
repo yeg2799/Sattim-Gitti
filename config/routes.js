@@ -8,6 +8,10 @@ export default [
     path:"/teknoloji",
     name:"Teknoloji",
     component:resolve(__dirname,"../pages/Technology/index")
+  },{
+    path:"/teknoloji/:slug",
+    name:"Ürün Detay",
+    component:resolve(__dirname,"../components/Cards/ProductDetail")
   },
   {
     path: "/login/",
