@@ -1,7 +1,8 @@
 <template>
     <div class="header">
         <nuxt-link to="/" class="link"><span class="title">Sattim Gitti</span></nuxt-link>
-        <div class="cart"><img src="@/assets/icons/svg/cart.svg"/></div>
+        
+        <div class="cart"><span class="cartCount">{{cartCount}}</span><img src="@/assets/icons/svg/cart.svg"/></div>
     </div>
 </template>
 
@@ -12,6 +13,11 @@ export default {
     components: {
         Button,
         Input
+    },
+    data(){
+        return{
+            cartCount:6,
+        }
     }
 }
 </script>
@@ -33,6 +39,15 @@ export default {
         width: 35px;
         position: absolute;
         right: 230px;
+        .cartCount{
+            background: black;
+            color: white;
+            border: 1px solid white;
+            padding: 2px 8px;
+            border-radius: 100%;
+            position: absolute;
+            margin: -7px 0px 0px 20px;
+        }
     }
 }
 </style>

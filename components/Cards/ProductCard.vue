@@ -1,9 +1,9 @@
 <template>
         <div class="productCard">
-            <img :src="require(`@/assets/image/products/${productPic}.jpg`)" alt="" class="productPic"/>
+            <img :src="require(`@/assets/image/products/${productPic}.jpg`)" alt="" class="productPic" @click="detailPage"/>
             <h4 class="text">SAMSUNG QE 65Q70T 65" 163 CM 4K UHD SMART QLED TV,DAHİLİ UYDU ALICI</h4>
             <span class="productPrice">{{productPrice}}<p class="price">TL</p></span>
-            <span class="addToCard">Sepete Ekle</span>
+            <span class="addToCard" >Sepete Ekle</span>
         </div>
 </template>
 <script>
@@ -20,6 +20,11 @@ export default {
         productPrice: {
             type: String,
             required: false
+        }
+    },
+    methods:{
+        detailPage(){
+            this.$router.push({name:"ProductDetail"})
         }
     }
 }

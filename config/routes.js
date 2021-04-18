@@ -6,12 +6,12 @@ export default [
     component: resolve(__dirname, "../pages/Home"),
   },{
     path:"/product/:slug",
-    name:"Teknoloji",
-    component:resolve(__dirname,"../pages/Technology/index")
+    name:"Product",
+    component:resolve(__dirname,"../pages/Product/Product")
   },{
     path:"/productDetail/:slug",
-    name:"Ürün Detay",
-    component:resolve(__dirname,"../components/Cards/ProductDetail")
+    name:"ProductDetail",
+    component:resolve(__dirname,"../pages/Product/ProductDetail")
   },
   {
     path: "/login/",
