@@ -27,12 +27,12 @@ export default [
     path: "/login/",
     alias: "/login",
     name: "Login",
-    component: resolve(__dirname, "../pages/login"),
+    component: resolve(__dirname, "../pages/User/Login"),
   },
   {
     path: "/register/",
     alias: "/register",
     name: "Register",
-    component: resolve(__dirname, "../pages/login"),
+    component: resolve(__dirname, "../pages/User/Register"),
   }
 ];

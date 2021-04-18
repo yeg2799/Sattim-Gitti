@@ -4,9 +4,13 @@
           <h1>Giriş Yap</h1>
         </div>
         <div class="form">
-          <input type="text" class="input" placeholder="E-posta adresi">
+          <input type="text" class="input" placeholder="E-posta adresi" /> 
           <hr class="line">
-          <input type="text" class="input" placeholder="Şifre">
+          <div class="password">
+            <input type="text" class="input password" placeholder="Şifre" />
+            <img src="@/assets/icons/svg/lookPassword.svg" alt="" class="lookPassword" title="parolayı görmek için tıklayınız">
+          </div>
+          
           <hr class="line">
           <div ><nuxt-link to="/" class="forgetMyPassword"> Şifremi Unuttum</nuxt-link></div>
           <div class="buttons">
@@ -14,8 +18,6 @@
           <nuxt-link to="/register"  class="button">Kayıt ol</nuxt-link>
         </div>
         </div>
-        
-
   </div>
 </template>
 
@@ -32,7 +34,12 @@ export default {};
   .title{
     text-align: center;
   }
-
+  .password{
+    .lookPassword{
+      width: 30px;
+      cursor: pointer;
+    }
+  }
   .form{  
     position: relative;
     margin-top: 150px;
@@ -43,6 +50,7 @@ export default {};
     .line{
       width: 400px;
     }
+
     .forgetMyPassword{
     font-weight: 600;
     position: absolute;
