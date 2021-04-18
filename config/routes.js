@@ -14,6 +14,11 @@ export default [
     component:resolve(__dirname,"../pages/Product/ProductDetail")
   },
   {
+    path: "/cart",
+    name: "Cart",
+    component: resolve(__dirname, "../pages/Cart"),
+  },
+  {
     path: "/login/",
     alias: "/login",
     name: "Login",

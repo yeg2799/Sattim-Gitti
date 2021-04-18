@@ -1,8 +1,8 @@
 <template>
     <div class="header">
+        <nuxt-link to="/login" class="login"><span class="title">Hesabım</span></nuxt-link>
         <nuxt-link to="/" class="link"><span class="title">Sattim Gitti</span></nuxt-link>
-        
-        <div class="cart"><span class="cartCount">{{cartCount}}</span><img src="@/assets/icons/svg/cart.svg"/></div>
+        <div class="cart"><nuxt-link to="/Cart" class="link"> <span class="cartCount">{{cartCount}}</span><img src="@/assets/icons/svg/cart.svg"/></nuxt-link></div>
     </div>
 </template>
 
@@ -27,6 +27,12 @@ export default {
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+    .login{
+        position: absolute;
+        left: 230px;
+        color: black;
+        text-decoration: none;
+    }
     .link{
         color: black;
         text-decoration: none;
