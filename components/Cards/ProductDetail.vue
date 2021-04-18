@@ -16,8 +16,6 @@
         </div>
         <div class="productProperty">
             <h1>Ürün Özellikleri</h1>
-
-
         </div>
     </div>
 </template>

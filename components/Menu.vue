@@ -1,14 +1,38 @@
 <template>
     <div class="Menu">
-        <NuxtLink to="/" class="link"><span>Anasayfa</span></NuxtLink>
-        <NuxtLink to="/teknoloji" class="link"><span>Teknoloji</span></NuxtLink>
-        <NuxtLink to="/moda" class="link"><span>Moda</span></NuxtLink>
-        <NuxtLink to="/ev" class="link"><span>Ev</span></NuxtLink>
+        <div v-for="(menu, index) in menuList" :key="index">
+            <NuxtLink :to="menu.slug" class="link"
+                ><span>{{ menu.title }}</span></NuxtLink
+            >
+        </div>
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    data() {
+        return {
+            menuList: [
+                {
+                    title: 'Anasayfa',
+                    slug: '/',
+                },
+                {
+                    title: 'Teknoloji',
+                    slug: '/product/teknoloji',
+                },
+                {
+                    title: 'Moda',
+                    slug: '/product/moda',
+                },
+                {
+                    title: 'Ev',
+                    slug: '/product/ev',
+                },
+            ],
+        }
+    },
+}
 </script>
 
 <style lang="scss" scoped>

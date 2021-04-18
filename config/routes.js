@@ -5,11 +5,11 @@ export default [
     name: "Home",
     component: resolve(__dirname, "../pages/Home"),
   },{
-    path:"/teknoloji",
+    path:"/product/:slug",
     name:"Teknoloji",
     component:resolve(__dirname,"../pages/Technology/index")
   },{
-    path:"/teknoloji/:slug",
+    path:"/productDetail/:slug",
     name:"Ürün Detay",
     component:resolve(__dirname,"../components/Cards/ProductDetail")
   },

@@ -26,10 +26,9 @@
         </div>
       </div>
     </div> -->
-    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/teknoloji"/>
-    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/teknoloji"/>
-    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/teknoloji"/>
-    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/teknoloji"/>
+    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/product/teknoloji"/>
+    <PromotionCard themplate="mens_outerwear" title="Ev Ürünleri" buttonText="Daha fazlası için" slug="/product/ev"/>
+    <PromotionCard themplate="mens_outerwear" title="Modaya Dair Herşey" buttonText="Daha fazlası için" slug="/product/moda"/>
   </div>
 </template>
 
