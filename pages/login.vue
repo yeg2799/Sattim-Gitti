@@ -1,6 +1,21 @@
 <template>
-  <div>
-    Login Kısmı
+  <div class="login">
+        <div class="title">
+          <h1>Giriş Yap</h1>
+        </div>
+        <div class="form">
+          <input type="text" class="input" placeholder="E-posta adresi">
+          <hr class="line">
+          <input type="text" class="input" placeholder="Şifre">
+          <hr class="line">
+          <div ><nuxt-link to="/" class="forgetMyPassword"> Şifremi Unuttum</nuxt-link></div>
+          <div class="buttons">
+          <span class="button">Giriş Yap</span>
+          <nuxt-link to="/register"  class="button">Kayıt ol</nuxt-link>
+        </div>
+        </div>
+        
+
   </div>
 </template>
 
@@ -8,4 +23,54 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title{
+    text-align: center;
+  }
+
+  .form{  
+    position: relative;
+    margin-top: 150px;
+    .input{
+      width: 360px;
+      outline: none;
+    }
+    .line{
+      width: 400px;
+    }
+    .forgetMyPassword{
+    font-weight: 600;
+    position: absolute;
+    right: 0px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+      color: red;
+    }
+  }
+  .buttons{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    .button{
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid black;
+      padding: 10px 67px;
+      border-radius: 5px;
+      &:hover{
+        background: black;
+        color: white;
+      }
+    }
+  }
+  }
+}
+</style>

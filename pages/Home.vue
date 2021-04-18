@@ -1,34 +1,8 @@
 <template>
   <div class="home">
-    <!-- <div class="container">
-      <div class="popularProducts">
-        <h1>En çok Satılan Ürünlerimiz</h1>
-        <div class="productList">
-          <ProductCard
-            productDesc="Xiamoi Mi 10T Pro 256GB"
-            productPrice="5000"
-          />
-          <ProductCard productDesc="Açıklama" productPrice="5000" />
-          <ProductCard productDesc="Açıklama" productPrice="5000" />
-          <ProductCard productDesc="Açıklama" productPrice="5000" />
-          <ProductCard productDesc="Açıklama" productPrice="5000" />
-          <ProductCard productDesc="Açıklama" productPrice="5000" />
-        </div>
-      </div>
-      <div class="brands">
-        <h1>Aradığın Markalar</h1>
-        <div class="brandList">
-          <BrandCard brandName="Acer" />
-          <BrandCard brandName="Acer" />
-          <BrandCard brandName="Acer" />
-          <BrandCard brandName="Acer" />
-          <BrandCard brandName="Acer" />
-        </div>
-      </div>
-    </div> -->
-    <PromotionCard themplate="mens_outerwear" title="Teknoloji Ürünleri" buttonText="Daha fazlası için" slug="/product/teknoloji"/>
-    <PromotionCard themplate="mens_outerwear" title="Ev Ürünleri" buttonText="Daha fazlası için" slug="/product/ev"/>
-    <PromotionCard themplate="mens_outerwear" title="Modaya Dair Herşey" buttonText="Daha fazlası için" slug="/product/moda"/>
+    <div  v-for="card in promotionCard" :key="card">
+        <PromotionCard :themplate="card.themplateImage" :title="card.title" :buttonText="card.buttonText" :slug="card.slug"/>
+    </div>
   </div>
 </template>
 
@@ -37,9 +11,31 @@ import ProductCard from "@/components/Cards/ProductCard.vue";
 import BrandCard from "@/components/Cards/BrandCard.vue";
 import PromotionCard from "@/components/Cards/promotionCards";
 export default {
+  data(){
+    return{
+      promotionCard:[
+        {
+          themplateImage:"mens_outerwear",
+          title:"Teknoloji Ürünleri",
+          buttonText:"Daha fazlası için",
+          slug:"/product/teknoloji"
+        },
+        {
+          themplateImage:"mens_outerwear",
+          title:"Ev Ürünleri",
+          buttonText:"Daha fazlası için",
+          slug:"/product/ev"
+        },
+        {
+          themplateImage:"mens_outerwear",
+          title:"Modaya Dair Herşey",
+          buttonText:"Daha fazlası için",
+          slug:"/product/moda"
+        }
+      ]
+    }
+  },
   components: {
-    ProductCard,
-    BrandCard,
     PromotionCard,
   },
 };
@@ -53,23 +49,4 @@ export default {
   align-items: center;
   justify-content: center;
 }
-// .popularProducts {
-//   display: flex;
-//   flex-direction: column;
-
-//   .productList {
-//     display: flex;
-//     flex-wrap: wrap;
-//     padding-top: 20px;
-//   }
-// }
-// .brands {
-//   display: flex;
-//   flex-direction: column;
-//   .brandList{
-//     padding-top: 20px;
-//     display: flex;
-//     margin-right: 120px;
-//   }
-// }
 </style>

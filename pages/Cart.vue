@@ -27,7 +27,7 @@
         </div>
         <div class="payment">
           <span>Toplam:7800₺</span>
-          <div class="button">
+          <div class="button" @click="payment">
             Ödemeye Geç
           </div>
         </div>
@@ -36,7 +36,11 @@
 
 <script>
 export default {
-
+methods:{
+  payment(){
+    this.$router.push({name:"ProductPayment"})
+  }
+}
 }
 </script>
 
@@ -58,6 +62,7 @@ export default {
     }
     .icon{
       width: 25px;
+      cursor: pointer;
     }
   }
   .payment{
@@ -71,6 +76,11 @@ export default {
       border: 3px solid black;
       padding: 10px;
       margin-left: 50px;
+      cursor: pointer;
+      &:hover{
+        background: black;
+        color: white;
+      }
     }
   }
 }

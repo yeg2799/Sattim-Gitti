@@ -14,9 +14,14 @@ export default [
     component:resolve(__dirname,"../pages/Product/ProductDetail")
   },
   {
+    path:"/productPayment",
+    name:"ProductPayment",
+    component:resolve(__dirname,"../pages/Product/ProductPayment")
+  },
+  {
     path: "/cart",
     name: "Cart",
-    component: resolve(__dirname, "../pages/Cart"),
+    component: resolve(__dirname, "../pages/Cart")
   },
   {
     path: "/login/",

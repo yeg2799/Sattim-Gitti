@@ -3,9 +3,7 @@
         <img :src="require(`@/assets/image/products/${themplate}.jpg`)" />
         <span class="text">{{title}}</span>
         <div class="button">
-            <nuxt-link :to="slug" class="techButton"
-                ><span>{{buttonText}}</span></nuxt-link
-            >
+            <nuxt-link :to="slug" class="techButton"><span>{{buttonText}}</span></nuxt-link>
         </div>
     </div>
 </template>
@@ -53,6 +51,10 @@ export default {
         padding: 10px 50px;
         text-decoration: none;
         color: black;
+        &:hover{
+            background: black;
+            color: white;
+        }
     }
 }
 </style>
