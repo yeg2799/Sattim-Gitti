@@ -44,7 +44,7 @@ export default {
         text-align: center;
     }
     .productPrice{
-        color: #684EDE;
+        color: #726f81;
         font-size: 40px;
         display: flex;
         align-items: flex-end;

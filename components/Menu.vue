@@ -29,6 +29,10 @@ export default {
                     title: 'Ev',
                     slug: '/product/ev',
                 },
+                {
+                    title: 'Kıyafet',
+                    slug: '/product/kıyafet',
+                },
             ],
         }
     },

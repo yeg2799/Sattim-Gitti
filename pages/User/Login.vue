@@ -7,7 +7,7 @@
           <input type="text" class="input" placeholder="E-posta adresi" /> 
           <hr class="line">
           <div class="password">
-            <input type="text" class="input password" placeholder="Şifre" />
+            <input type="password" class="input password" placeholder="Şifre" />
             <img src="@/assets/icons/svg/lookPassword.svg" alt="" class="lookPassword" title="parolayı görmek için tıklayınız">
           </div>
           
@@ -45,6 +45,7 @@ export default {};
     margin-top: 150px;
     .input{
       width: 360px;
+      border: 0px;
       outline: none;
     }
     .line{

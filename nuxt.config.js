@@ -30,10 +30,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // Simple usage
-    '@nuxtjs/vuetify',
     '@nuxtjs/svg-sprite',
     // With options
-    ['@nuxtjs/vuetify', { /* module options */ }]
 
   ],
 

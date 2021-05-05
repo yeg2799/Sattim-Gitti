@@ -23,40 +23,6 @@
             />
         </div>
     </div>
-    <!-- <component
-        :is="component"
-        :to="to"
-        class="button"
-        :disabled="isLoading"
-        @click="clickButton"
-    >
-        <span v-if="!isLoading" class="button__wrp">
-            <span v-if="icon && iconPosition === 'left'" class="button__icon">
-                <svg-sprite :icon="buttonIcon1" />
-            </span>
-            <span
-                v-if="imageIcon && iconPosition === 'left'"
-                class="button__icon"
-            >
-                <img v-lazy-load :src="imageIcon" class="icon" />
-            </span>
-            <span v-if="title" class="button__text">
-                {{ title }}
-            </span>
-            <span v-if="icon && iconPosition === 'right'" class="button__icon">
-                <svg-sprite :icon="icon" />
-            </span>
-            <span
-                v-if="imageIcon && iconPosition === 'right'"
-                class="button__icon"
-            >
-                <img v-lazy-load :src="imageIcon" class="icon" />
-            </span>
-        </span>
-        <span v-if="isLoading">
-            Yükleniyor...
-        </span>
-    </component> -->
 </template>
 
 <script>
