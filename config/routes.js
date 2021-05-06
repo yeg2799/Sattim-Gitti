@@ -19,6 +19,11 @@ export default [
     component:resolve(__dirname,"../pages/Product/ProductPayment")
   },
   {
+    path:"/paymentResult",
+    name:"PaymentResult",
+    component:resolve(__dirname,"../pages/PaymentResult")
+  },
+  {
     path: "/cart",
     name: "Cart",
     component: resolve(__dirname, "../pages/Cart")

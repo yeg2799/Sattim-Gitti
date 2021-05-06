@@ -59,7 +59,7 @@
                     <span>Toplam</span>
                     <b>7800₺</b>
                 </div>
-                <input type="submit" value="Siparişi Tamamla" class="paymentButton">
+                <input type="submit" value="Siparişi Tamamla" class="paymentButton" @click="payment">
             </div>
         </div>
     </div>
@@ -67,7 +67,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+    methods:{
+        payment(){
+            this.$router.push({name:'PaymentResult'})
+        }
+    }
+};
 </script>
 
 <style lang="scss">
