@@ -19,20 +19,31 @@ export default [
     component:resolve(__dirname,"../pages/Product/ProductPayment")
   },
   {
+    path:"/paymentResult",
+    name:"PaymentResult",
+    component:resolve(__dirname,"../pages/PaymentResult")
+  },
+  {
     path: "/cart",
     name: "Cart",
     component: resolve(__dirname, "../pages/Cart")
   },
   {
-    path: "/login/",
+    path: "/login",
     alias: "/login",
     name: "Login",
     component: resolve(__dirname, "../pages/User/Login"),
   },
   {
-    path: "/register/",
+    path: "/register",
     alias: "/register",
     name: "Register",
     component: resolve(__dirname, "../pages/User/Register"),
+  },
+  {
+    path: "/forgetPassword",
+    alias: "/forgetPassword",
+    name: "forgetPassword",
+    component: resolve(__dirname, "../pages/User/ForgetPassword"),
   }
 ];

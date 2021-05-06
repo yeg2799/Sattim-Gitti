@@ -5,23 +5,83 @@
             <span>Ödeme yapmak için formu düzgün bir şekilde doldurunuz</span>
         </div>
     <div class="info">
-        <div class="leftPart">
-            <div class="userInfo">user</div>
-            <div class="adressInfo">adress</div>
+        <div class="col-6">
+            <div class="userInfo">
+                <h4>Hesap Bilgileri</h4>
+                    <div class="mt-4">
+                        <input type="text" placeholder="Email adresiniz" class="input">
+                        <hr>
+                        <input type="tel" placeholder="Telefon numarası" class="input">
+                        <hr>
+                    </div>
+
+            </div>
+            <div class="adressInfo">
+                <h4>Adres Bilgileri</h4>
+                        <textarea class="form-control input" id="exampleFormControlTextarea1" rows="3" > </textarea>
+                        <hr>
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                <option selected>Şehir Seçiniz</option>
+                                <option value="1">Adana</option>
+                                <option value="2">Ankara</option>
+                                <option value="3">İzmir</option>
+                                <option value="3">İstanbul</option>
+                        </select>
+            </div>
         </div>
-        <div class="rightPart">
-            <div class="paymentInfo">payment</div>
-            <div class="orderSummary">order</div>
+        <div class="col-6">
+            <div class="paymentInfo">
+                <h4>Ödeme Bilgileri</h4>
+                <div class="mt-4">
+                    <input type="text"  placeholder="Kart numaranız" class="input">
+                    <hr>
+                    <input type="text"  placeholder="Kart üstünde yazan isim" class="input">
+                    <hr>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <input type="date" placeholder="aa/yy" class="input">
+                        <hr>
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="CVV" class="input">
+                        <hr>    
+                    </div>
+                        </div>
+            </div>
+            <div class="orderSummary">
+                <h5>Sipariş Özeti</h5>
+                <div class="d-flex justify-content-between mt-4">
+                    <span>Philips 50PUS9432 50"(2)</span>
+                    <b>3900₺</b>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                    <span>Toplam</span>
+                    <b>7800₺</b>
+                </div>
+                <input type="submit" value="Siparişi Tamamla" class="paymentButton" @click="payment">
+            </div>
         </div>
     </div>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+
+    methods:{
+        payment(){
+            this.$router.push({name:'PaymentResult'})
+        }
+    }
+};
 </script>
 
 <style lang="scss">
+.input {
+    border: none;
+    outline: none;
+}
 .payment{
     display: flex;
     flex-direction: column;
@@ -29,10 +89,31 @@ export default {};
         text-align: center;
     }
     .info{
-        width: 75%;
-        margin: 0 auto;
+        width: 60%;
+        margin: 100px auto;
         display: flex;
-        border: 1px solid black;
+        .userInfo{
+            width: 70%;
+        }
+        .adressInfo{
+            width: 70%;
+        }
+        .paymentInfo{
+             width: 70%;
+        }
+        .orderSummary{
+            width: 70%;
+            .paymentButton{
+                width: 100%;
+                padding: 10px;
+                background: white;
+                margin-top: 2rem;
+                &:hover{
+                    color: white;
+                    background: black;
+                }
+            }
+        }
     }
 }
 </style>

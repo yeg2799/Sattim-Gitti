@@ -12,7 +12,7 @@
           </div>
           
           <hr class="line">
-          <div ><nuxt-link to="/" class="forgetMyPassword"> Şifremi Unuttum</nuxt-link></div>
+          <div ><nuxt-link :to="{name:'forgetPassword'}" class="forgetMyPassword"> Şifremi Unuttum</nuxt-link></div>
           <div class="buttons">
           <span class="button">Giriş Yap</span>
           <nuxt-link to="/register"  class="button">Kayıt ol</nuxt-link>
