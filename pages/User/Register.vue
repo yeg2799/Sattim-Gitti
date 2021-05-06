@@ -1,5 +1,5 @@
 <template>
-<div class="register ">
+<div class="register">
     <div class="title text-center mt-3">
         <h1>Kayıt Ol</h1>
     </div>
@@ -33,7 +33,6 @@
         <div class="infoText">
         <span >Kişisel verileriniz, Aydınlatma Metni kapsamında işlenmektedir. “Üye ol” veya “Sosyal Hesap” butonlarından birine basarak Üyelik Sözleşmesi’ni, Rıza Metni’ni, Çerez Politikası’nı okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</span>
         </div>
-       
     </div>
 
 </div>
