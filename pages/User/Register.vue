@@ -5,11 +5,11 @@
     </div>
     <div class="form mt-5">
         <div class="d-flex justify-content-between">
-            <div class="nameInput col-5">
+            <div class="nameInput">
                 <input type="text" class="input name" placeholder="Adınız">
                 <hr class="line">
             </div>
-            <div class="surnameInput col-5">
+            <div class="surnameInput">
                 <input type="text" class="input surname" placeholder="Soyadınız">
                 <hr class="line">
             </div>
@@ -27,7 +27,7 @@
             <input type="checkbox" name="" id="" class="checkbox">
             <span class="checkText">Önemli kampanyalardan haberdar olmak için Rıza Metni kapsamında elektronik ileti almak istiyorum.</span>
         </div>
-        <div class="">
+        <div class="signUp">
             <input type="submit" value="Üye Ol" class="registerButton">
         </div>
         <div class="infoText">
@@ -82,9 +82,20 @@ export default {
     background: white;
     width: 100%;
     padding: 20px;
+    &:hover{
+        color: white;
+        background: black;
+    }
 }
 .infoText{
     margin-top: 70px;
     font-size: 18px;
 }
+.nameInput{
+    width: 48%;
+}
+.surnameInput{
+    width: 48%;
+}
+
 </style>

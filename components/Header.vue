@@ -1,6 +1,7 @@
 <template>
     <div class="header">
         <nuxt-link to="/login" class="login"><span class="title">Hesabım</span></nuxt-link>
+        <div class="hamburgerMenu"><img src="@/assets/icons/svg/hamburgerMenu.svg"/></div>
         <nuxt-link to="/" class="link"><span class="title">Sattim Gitti</span></nuxt-link>
         <div class="cart"><nuxt-link to="/Cart" class="link"> <span class="cartCount">{{cartCount}}</span><img src="@/assets/icons/svg/cart.svg"/></nuxt-link></div>
     </div>
@@ -12,7 +13,7 @@ import Input from '@/components/VueInput'
 export default {
     components: {
         Button,
-        Input
+        Input,
     },
     data(){
         return{
@@ -22,16 +23,22 @@ export default {
 }
 </script>
 <style lang="scss">
+    @import "@/assets/style/variables/_breakpoints.scss";
 .header {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
     margin-top: 15px;
+    @include bp(tablet){
+        width: 95%;
+    }
     .login{
-        position: absolute;
-        left: 230px;
         color: black;
         text-decoration: none;
+        @include bp(tablet){
+            display: none;
+        }
     }
     .link{
         color: black;
@@ -43,8 +50,8 @@ export default {
     }
     .cart{
         width: 35px;
-        position: absolute;
-        right: 230px;
+
+
         .cartCount{
             background: black;
             color: white;
@@ -54,6 +61,13 @@ export default {
             position: absolute;
             margin: -7px 0px 0px 20px;
         }
+    }
+}
+.hamburgerMenu{
+    display: none;
+    @include bp(tablet){
+        display: flex;
+        cursor: pointer;
     }
 }
 </style>

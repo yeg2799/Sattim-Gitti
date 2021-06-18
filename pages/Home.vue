@@ -15,7 +15,7 @@ export default {
     return{
       promotionCard:[
         {
-          themplateImage:"mens_outerwear",
+          themplateImage:"technology-banner",
           title:"Teknoloji Ürünleri",
           buttonText:"Daha fazlası için",
           slug:"/product/teknoloji"
@@ -48,5 +48,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 </style>

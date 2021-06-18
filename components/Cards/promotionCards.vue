@@ -1,7 +1,9 @@
 <template>
-    <div class="promotionCard">
-        <img :src="require(`@/assets/image/products/${themplate}.jpg`)" />
-        <span class="text">{{title}}</span>
+    <div class="promotion-card">
+        <div class="promotion-card__image">
+            <img :src="require(`@/assets/image/thumbnail/${themplate}.jpg`)" />
+        </div>
+        <div class="promotion-card__text"><span class="text">{{title}}</span></div>
         <div class="button">
             <nuxt-link :to="slug" class="techButton"><span>{{buttonText}}</span></nuxt-link>
         </div>
@@ -32,16 +34,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.promotionCard {
+.promotion-card {
     display: flex;
     flex-direction: column;
     padding-top: 10px;
     margin-bottom: 10px;
+    .promotion-card__text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     .text {
-        text-align: center;
         font-size: 20px;
         padding-top: 10px;
     }
+    }
+
     .button {
         text-align: center;
         padding-top: 15px;
