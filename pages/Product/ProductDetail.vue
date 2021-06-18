@@ -35,6 +35,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+ @import "@/assets/style/variables/_breakpoints.scss";
 .productDetail {
     display: flex;
     flex-direction: column;
@@ -44,6 +45,9 @@ export default {}
     .product {
         width: 60%;
         display: flex;
+        @include bp(tablet){
+            flex-direction: column;
+        }
         .left {
             margin-right: 50px;
         }
@@ -51,6 +55,9 @@ export default {}
             display: flex;
             flex-direction: column;
             padding: 50px 20px;
+            @include bp(tablet){
+            padding: 0px;
+            }
             .description {
                 font-size: 22px;
                 font-weight: 500;
@@ -66,6 +73,9 @@ export default {}
                 font-size: 20px;
                 margin-top: 100px;
                 cursor: pointer;
+                @include bp(tablet){
+                    margin-top: 0px;
+                }
                 &:hover {
                     color: white;
                     background: black;

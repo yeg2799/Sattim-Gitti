@@ -1,7 +1,11 @@
 <template>
-        <div class="productCard">
-            <img :src="require(`@/assets/image/products/${productPic}.jpg`)" alt="" class="productPic" @click="detailPage"/>
-            <h4 class="text">SAMSUNG QE 65Q70T 65" 163 CM 4K UHD SMART QLED TV,DAHİLİ UYDU ALICI</h4>
+        <div class="product-card">
+            <div class="product-card__image">
+                <img :src="require(`@/assets/image/products/${productPic}.jpg`)" alt="" class="productPic" @click="detailPage"/>
+            </div>
+            <div class="product-card__desc">
+                <h4 class="text">SAMSUNG QE 65Q70T 65" 163 CM 4K UHD SMART QLED TV,DAHİLİ UYDU ALICI</h4>
+            </div>
             <span class="productPrice">{{productPrice}}<p class="price">TL</p></span>
             <span class="addToCard" >Sepete Ekle</span>
         </div>
@@ -30,7 +34,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.productCard{
+@import "@/assets/style/variables/_breakpoints.scss";
+.product-card{
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -38,6 +43,8 @@ export default {
     justify-content: center;
     margin-right: 10px;
     margin-bottom: 20px;
+    // border: 1px solid #bfbfbf;
+    // border-radius: 10px;
     .text{
         font-size: 20px;
         font-weight: 500;
@@ -61,6 +68,9 @@ export default {
         &:hover{
             color: red;
         }
+    }
+    @include bp(tablet){
+        width: 100%;
     }
 }
 
