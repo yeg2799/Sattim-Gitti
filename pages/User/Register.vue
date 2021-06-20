@@ -46,12 +46,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/style/variables/_breakpoints.scss";
 .register{
     display: flex;
     flex-direction: column;
     width: 30%;
     margin: 0 auto;
-
+    @include bp(tablet){
+        width: 70%;
+    }
 .password{
     position: relative;
     .lookPassword{
@@ -76,6 +79,9 @@ export default {
 .checkText{
     font-size: 25px;
     font-weight: 600;
+    @include bp(tablet){
+        font-size: 16px;
+    }
 }
 .registerButton{
     margin-top: 40px;
@@ -90,6 +96,9 @@ export default {
 .infoText{
     margin-top: 70px;
     font-size: 18px;
+    @include bp(tablet){
+        margin-bottom: 20px;
+    }
 }
 .nameInput{
     width: 48%;

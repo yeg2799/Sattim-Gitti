@@ -92,11 +92,18 @@ export default {}
         display: flex;
         flex-direction: column;
         width: 60%;
-
+        @include bp(tablet){
+            margin-top: 20px;
+        }
         .properties{
             display: flex;
             flex-wrap: wrap;
             margin: 0 auto;
+        @include bp(tablet){
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
 
             .property{
                 font-size: 20px;
@@ -104,6 +111,11 @@ export default {}
                 padding: 20px;
                 display: flex;
                 justify-content: space-between;
+                @include bp(tablet){
+                    width: 100%;
+                    justify-content: baseline;
+                    font-size: 15px;
+                }
             }
         }
     }

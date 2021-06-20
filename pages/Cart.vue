@@ -2,41 +2,80 @@
   <div class="cart">
         <div class="title">
           <h1>Sepetiniz</h1>
-          <p>(2 Ürün)</p>
+          <p>({{products.length}} Ürün)</p>
         </div>
-        <div class="products">
-          <img src="@/assets/image/products/product_samsung_EA2732_tv.jpg" alt="" class="productImage">
-          <h4>PHILIPS 50PUS8505 50" </h4>
-          <span>Adet:2</span>
-          <span>3900₺</span>
-          <img src="@/assets/icons/svg/multiplication.svg" alt="" class="icon"/>
+        <div class="container">
+        <div class="products" v-for="product in products" :key="product.id">
+          <div class="product-image">
+            <img alt="" class="productImage"  :src="require(`@/assets/image/products/${product.image}`)">
+          </div>
+          <div class="d-flex product-center">
+          <div class="product-title">
+            <h4>PHILIPS 50PUS8505 50"</h4>
+          </div>
+            <div class="product-piece">
+            <div @click="product.orderPiece>0 ? product.orderPiece--:''">
+              <img src="@/assets/icons/svg/minus.svg" alt="" class="icon" />
+            </div>
+              <span class="product-piece__text">{{product.orderPiece}}</span>
+              <div @click="product.orderPiece++">
+                <img src="@/assets/icons/svg/plus.svg" alt="" class="icon"/>
+              </div>
+          </div>
+                    <div class="product-price">
+              <span>{{product.orderPiece*product.orderPrice}}TL</span>
+          </div>
+          </div>
+          <div class="delete-product">
+              <img src="@/assets/icons/svg/multiplication.svg" alt="" class="icon"/>
+          </div>
+
         </div>
-        <div class="products">
-          <img src="@/assets/image/products/product_samsung_EA2732_tv.jpg" alt="" class="productImage">
-          <h4>PHILIPS 50PUS8505 50" </h4>
-          <span>Adet:2</span>
-          <span>3900₺</span>
-          <img src="@/assets/icons/svg/multiplication.svg" alt="" class="icon"/>
-        </div>
-        <div class="products">
-          <img src="@/assets/image/products/product_samsung_EA2732_tv.jpg" alt="" class="productImage">
-          <h4>PHILIPS 50PUS8505 50" </h4>
-          <span>Adet:2</span>
-          <span>3900₺</span>
-          <img src="@/assets/icons/svg/multiplication.svg" alt="" class="icon"/>
-        </div>
-        <div class="payment">
-          <span>Toplam:7800₺</span>
-          <div class="button" @click="payment">
-            Ödemeye Geç
+          <div class="payment">
+          <div class="payment-text">
+            <span> {{totalPrice}}TL</span>
+          </div>
+          <div class="goPayment" @click="payment">
+            <span>Ödemeye Geç</span> 
           </div>
         </div>
+        </div>
+
   </div>
 </template>
 
 <script>
 export default {
-methods:{
+  data(){
+    return{
+      products:[
+        { 
+          id:1,
+          image:"product_samsung_EA2732_tv.jpg",
+          title:"PHILIPS 50PUS8505 50",
+          orderPiece:1,
+          orderPrice:4000,
+        },
+        { 
+          id:2,
+          image:"product_samsung_EA2732_tv.jpg",
+          title:"PHILIPS 50PUS8505 50",
+          orderPiece:2,
+          orderPrice:4000,
+        },
+      ]
+    }
+  },
+  computed:{
+    totalPrice(){
+      let total=0
+      this.products.forEach(element => {
+          total +=  element.orderPiece*element.orderPrice;
+      });
+      return total
+    }
+  },
+  methods:{
   payment(){
     this.$router.push({name:"ProductPayment"})
   }
@@ -45,6 +84,7 @@ methods:{
 </script>
 
 <style lang="scss" scoped>
+ @import "@/assets/style/variables/_breakpoints.scss";
 .cart{
   display: flex;
   flex-direction: column;
@@ -55,8 +95,10 @@ methods:{
   }
   .products{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 70px;
+    align-items: center;
+
     .productImage{
       width: 150px;
     }
@@ -64,19 +106,36 @@ methods:{
       width: 25px;
       cursor: pointer;
     }
+    .product-center{
+      @include bp(tablet){
+        flex-direction: column;
+      }
+      .product-piece{
+        display: flex;
+        padding: 0 20px;
+        
+      @include bp(tablet){
+        padding: 0;
+      }
+    .product-piece__text{
+      padding: 0 20px;
+    }
   }
+    }
+  }
+
   .payment{
     display: flex;
-    position: absolute;
     align-items: center;
-    right: 220px;
-    bottom:0px ;
-
-    .button{
+    justify-content: flex-end;
+    .goPayment{
       border: 3px solid black;
       padding: 10px;
       margin-left: 50px;
       cursor: pointer;
+      p{
+        display: block;
+      }
       &:hover{
         background: black;
         color: white;

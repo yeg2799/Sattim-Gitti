@@ -30,14 +30,13 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // Simple usage
-    '@nuxtjs/svg-sprite',
     // With options
 
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    ['bootstrap-vue/nuxt']
+    ['bootstrap-vue/nuxt','@nuxtjs/svg-sprite',]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
