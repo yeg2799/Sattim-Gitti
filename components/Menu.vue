@@ -23,24 +23,24 @@ export default {
         return {
             menuList: [
                 {
-                    title: 'Anasayfa',
+                    title: 'ANASAYFA',
                     slug: '/',
                 },
                 {
-                    title: 'Teknoloji',
+                    title: 'TEKNOLOJİ',
                     slug: '/product/teknoloji',
                 },
                 {
-                    title: 'Moda',
+                    title: 'MODA',
                     slug: '/product/moda',
                 },
                 {
-                    title: 'Ev',
+                    title: 'EV',
                     slug: '/product/ev',
                 },
                 {
-                    title: 'Kıyafet',
-                    slug: '/product/kıyafet',
+                    title: 'SAAT & AKSESUAR',
+                    slug: '/product/aksesuar',
                 },
             ],
         }

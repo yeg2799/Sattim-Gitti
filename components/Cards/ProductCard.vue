@@ -1,13 +1,19 @@
 <template>
         <div class="product-card">
+            <div class="product-card__wrap">
+            <div class="product-card__desc">
+                <span class="text">SAMSUNG QE 65Q70T 65" 163 CM 4K UHD SMART QLED TV,DAHİLİ UYDU ALICI</span>
+            </div>
             <div class="product-card__image">
                 <img :src="require(`@/assets/image/products/${productPic}.jpg`)" alt="" class="productPic" @click="detailPage"/>
             </div>
-            <div class="product-card__desc">
-                <h4 class="text">SAMSUNG QE 65Q70T 65" 163 CM 4K UHD SMART QLED TV,DAHİLİ UYDU ALICI</h4>
-            </div>
+
             <span class="productPrice">{{productPrice}}<p class="price">TL</p></span>
-            <span class="addToCard" >Sepete Ekle</span>
+            <div class="add-card">
+                <span class="add-card__text">Sepete Ekle</span>
+            </div>
+            
+            </div>
         </div>
 </template>
 <script>
@@ -36,38 +42,53 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variables/_breakpoints.scss";
 .product-card{
-    width: 20%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
     margin-bottom: 20px;
-    // border: 1px solid #bfbfbf;
-    // border-radius: 10px;
-    .text{
-        font-size: 20px;
-        font-weight: 500;
-        text-align: center;
+    cursor: pointer;
+    border: 1px solid #bfbfbf;
+    border-radius: 10px;
+    &:hover{
+        box-shadow: 3px 3px 3px 3px #bfbfbf;
+        .productPrice{
+            display: none;
+        }
+        .add-card{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #FFECE0;
+                padding: 10px 50px; 
+                cursor: pointer;
+                font-size: 16px;
+                width: 60%;
+                margin:0 auto;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                background-color:#FFECE0 ;
+                color: #FF6000;
+        }
+    }
+    .product-card__desc{
+        padding: 30px 20px;
     }
     .productPrice{
         color: #726f81;
         font-size: 40px;
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
         .price{
             font-size: 20px;
         }
     }
-    .addToCard{
-        border: 1px solid black;
-        padding: 10px 50px; 
-        cursor: pointer;
-        font-size: 20px;
-        &:hover{
-            color: red;
-        }
+    .add-card{
+        display: none;
+
     }
     @include bp(tablet){
         width: 100%;

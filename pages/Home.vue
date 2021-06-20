@@ -15,21 +15,21 @@ export default {
     return{
       promotionCard:[
         {
-          themplateImage:"technology-banner",
+          themplateImage:"technology-banner.jpg",
           title:"Teknoloji Ürünleri",
-          buttonText:"Daha fazlası için",
+          buttonText:"Daha fazlası için tıklayınız",
           slug:"/product/teknoloji"
         },
         {
-          themplateImage:"mens_outerwear",
+          themplateImage:"home-thumbnail.png",
           title:"Ev Ürünleri",
-          buttonText:"Daha fazlası için",
+          buttonText:"Daha fazlası için tıklayınız",
           slug:"/product/ev"
         },
         {
-          themplateImage:"mens_outerwear",
+          themplateImage:"mens_outerwear.jpg",
           title:"Modaya Dair Herşey",
-          buttonText:"Daha fazlası için",
+          buttonText:"Daha fazlası için tıklayınız",
           slug:"/product/moda"
         }
       ]
