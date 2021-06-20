@@ -4,9 +4,9 @@
             <h1>Ödeme Sayfası</h1>
             <span>Ödeme yapmak için formu düzgün bir şekilde doldurunuz</span>
         </div>
-    <div class="info">
-        <div class="col-6">
-            <div class="userInfo">
+    <div class="info container">
+        <div class="col-md-6 col-12">
+            <div class="userInfo ">
                 <h4>Hesap Bilgileri</h4>
                     <div class="mt-4">
                         <input type="text" placeholder="Email adresiniz" class="input">
@@ -16,20 +16,20 @@
                     </div>
 
             </div>
-            <div class="adressInfo">
+            <div class="adress-info">
                 <h4>Adres Bilgileri</h4>
                         <textarea class="form-control input" id="exampleFormControlTextarea1" rows="3" > </textarea>
-                        <hr>
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <!-- <hr> -->
+                        <!-- <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                                 <option selected>Şehir Seçiniz</option>
                                 <option value="1">Adana</option>
                                 <option value="2">Ankara</option>
                                 <option value="3">İzmir</option>
                                 <option value="3">İstanbul</option>
-                        </select>
+                        </select> -->
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-12">
             <div class="paymentInfo">
                 <h4>Ödeme Bilgileri</h4>
                 <div class="mt-4">
@@ -77,7 +77,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "@/assets/style/variables/_breakpoints.scss";
 .input {
     border: none;
     outline: none;
@@ -89,20 +90,20 @@ export default {
         text-align: center;
     }
     .info{
-        width: 60%;
         margin: 100px auto;
         display: flex;
-        .userInfo{
-            width: 70%;
-        }
-        .adressInfo{
-            width: 70%;
+        @include bp(tablet){
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
         }
         .paymentInfo{
-             width: 70%;
+            @include bp(tablet){
+            margin-top: 50px;
+        }
         }
         .orderSummary{
-            width: 70%;
             .paymentButton{
                 width: 100%;
                 padding: 10px;
