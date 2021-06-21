@@ -1,6 +1,6 @@
 <template>
     <div class="forgetPassword">
-        <h1 class="title text-center mt-3">Hesabımı Bul</h1>
+        <h1 class="title text-center mt-3">Şifremi Unuttum</h1>
         <div class="forget mt-5">
             <input type="text" class="input" placeholder="Adınızı veya Email adresinizi giriniz">
             <hr>
@@ -21,11 +21,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ @import "@/assets/style/variables/_breakpoints.scss";
 .forgetPassword{
     display: flex;
     flex-direction: column;
     width: 30%;
     margin: 0 auto;
+    @include bp(tablet){
+        width: 100%;
+        padding: 0 20px;
+    }
 }
 .forget{
         .input{

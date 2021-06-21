@@ -73,6 +73,7 @@ export default {}
                 font-size: 20px;
                 margin-top: 100px;
                 cursor: pointer;
+                border-radius: 20px;
                 @include bp(tablet){
                     margin-top: 0px;
                 }
