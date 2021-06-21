@@ -1,5 +1,6 @@
 import routers from './config/routes'
 export default {
+  target:'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'SattimGitti',
@@ -48,4 +49,7 @@ export default {
       routes.push(...routers);
     },
   },
+  generate: {
+    fallback: true
+  }
 }
