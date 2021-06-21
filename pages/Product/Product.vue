@@ -1,18 +1,11 @@
 <template>
-    <div class="techonologyPage">
+    <div class="category-page">
         <div class="category-image" v-if="categoryImage!==''">
             <img :src="require(`@/assets/image/thumbnail/${categoryImage}`)" alt="" width="1440" height="350"/>
         </div>
         <h3 class="title">{{title}}</h3>
         <span>(10 Ürün)</span>
         <div class="product-wrapper">
-            <ProductCard productPic="product_samsung_EA2732_tv" productPrice="5000"/>
-            <ProductCard productPic="product_samsung_EA2732_tv" productPrice="5000"/>
-            <ProductCard productPic="product_samsung_EA2732_tv" productPrice="5000"/>
-            <ProductCard productPic="product_samsung_EA2732_tv" productPrice="5000"/>
-            <ProductCard productPic="product_samsung_EA2732_tv" productPrice="5000"/>
-            <ProductCard productPic="product_samsung_EA2732_tv" productPrice="5000"/>
-            <ProductCard productPic="product_samsung_EA2732_tv" productPrice="5000"/>
             <ProductCard productPic="product_samsung_EA2732_tv" productPrice="5000"/>
         </div>
     </div>
@@ -59,9 +52,17 @@ export default {
 
 <style lang="scss" scoped>
     @import "@/assets/style/variables/_breakpoints.scss";
-    .techonologyPage {
+    .category-page {
         text-align: center;
         width: 100%;
+    }
+    .category-image{
+        img{
+            @include bp(tablet){
+                width: 100%;
+                height: auto;
+            }
+        }
     }
     .product-wrapper{
         display: flex;

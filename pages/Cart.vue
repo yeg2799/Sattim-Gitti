@@ -33,6 +33,7 @@
         </div>
           <div class="payment">
           <div class="payment-text">
+            <h5>Ödenecek Tutar:</h5>
             <span> {{totalPrice}}TL</span>
           </div>
           <div class="goPayment" @click="payment">
@@ -128,17 +129,34 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    .payment-text{
+      display: flex;
+      flex-direction: column;
+      color: #04A2CA;
+          h5{
+            color: #000;
+          }
+    }
+
     .goPayment{
-      border: 3px solid black;
+      border: 1px solid #04A2CA;
       padding: 10px;
       margin-left: 50px;
       cursor: pointer;
-      p{
-        display: block;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #04A2CA;
+      color: white;
+      span{
+        font-size: 18px;
+        font-weight: 500;
+
       }
       &:hover{
-        background: black;
-        color: white;
+        background: #fff;
+        color: #04A2CA;
       }
     }
   }

@@ -91,7 +91,7 @@ export default {
 
     }
     @include bp(tablet){
-        width: 100%;
+        width: 90%;
     }
 }
 

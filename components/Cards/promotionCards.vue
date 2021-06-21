@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ @import "@/assets/style/variables/_breakpoints.scss";
 .promotion-card {
     display: flex;
     flex-direction: column;
@@ -42,8 +43,15 @@ export default {
     .promotion-card__image{
         img{
             border-radius: 10px;
+            @include bp(tablet){
+                width: 100%;
+                height: auto;
+                border-radius: 0;
+            }
         }
+
     }
+
     .promotion-card__text{
         display: flex;
         align-items: center;
