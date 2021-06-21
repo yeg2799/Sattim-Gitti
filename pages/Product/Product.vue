@@ -24,7 +24,6 @@ export default {
         }
     },
     async fetch(){
-        console.log(this.$route)
         switch (this.$route.params.slug) {
             case "teknoloji":
                 this.title="Teknoloji Ürünleri"
